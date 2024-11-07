@@ -4,10 +4,10 @@ import reflect_metadata from "reflect-metadata";
 import dotenv from "dotenv";
 import express, { Request, Response } from "express";
 import cors from "cors";
-import userRoutes from "./src/routes/UserRoutes";
+import userRoutes from "./routes/UserRoutes";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpecs from "./swaggerConfig";
-import sequelize from "./src/config/database"; // Importando a instância do Sequelize
+import swaggerSpecs from "../swaggerConfig";
+import sequelize from "./config/database"; // Importando a instância do Sequelize
 
 dotenv.config();
 

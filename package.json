@@ -4,10 +4,17 @@
   "description": "Projeto Web2",
   "main": "Server.js",
   "scripts": {
-    "start": "ts-node-dev Server.ts",
+    "start": "ts-node-dev src/Server.ts",
     "debug": "nodemon --watch package.json --watch Server.ts --watch UserRoutes.ts --watch database.ts --watch UserController.ts --watch User.ts --watch UserService.ts --ext json,js,ts Server.ts",
-    "type-check": "tsc -p tsconfig.json --noEmit"
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -37,6 +44,8 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.7",
-    "@types/swagger-jsdoc": "^6.0.4"
+    "@types/swagger-jsdoc": "^6.0.4",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^6.0.1"
   }
 }
