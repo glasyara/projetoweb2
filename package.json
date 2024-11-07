@@ -5,7 +5,8 @@
   "main": "Server.js",
   "scripts": {
     "start": "ts-node-dev Server.ts",
-    "debug": "nodemon --watch package.json --watch Server.ts --watch UserRoutes.ts --watch database.ts --watch UserController.ts --watch User.ts --watch UserService.ts --ext json,js,ts Server.ts"
+    "debug": "nodemon --watch package.json --watch Server.ts --watch UserRoutes.ts --watch database.ts --watch UserController.ts --watch User.ts --watch UserService.ts --ext json,js,ts Server.ts",
+    "type-check": "tsc -p tsconfig.json --noEmit"
   },
   "author": "",
   "license": "MIT",
