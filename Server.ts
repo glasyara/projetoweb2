@@ -51,14 +51,14 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:8080",
+        url: "http://localhost:3000",
       },
     ],
   },
   apis: ["./src/routes/UserRoutes.ts"], // Ajuste o caminho se necessário
 };
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   try {
